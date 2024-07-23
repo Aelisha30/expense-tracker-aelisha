@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+.expense-tracker {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #023047;
+  font-family: Outfit;
+  font-weight: 300;
+}
+
+.expense-tracker h1 {
+  font-size: 32px;
+}
+.expense-tracker .icon{
+  width:40px;
+  height:40px;
+}
+.expense-tracker button {
+  margin-left: 10px;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 200px;
+}
+.profile-photo {
+  width: 120px;
+  border-radius: 50%;
+}
+.input{
+  font-family: Outfit;
+  height:50px;
+  width:200px;
+  border:2px solid gray;
+}
+.green{
+  background-color: green;
+  color:white;
+  border:none;
+  padding: 10px 20px;
+  margin:2px 4px;
+  border-radius: 50px;
+  font-family: Outfit;
+}
+
+.sign-out-button {
+  border: none;
+  width: 150px;
+  background: #3498db;
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+  font-family: Outfit;
+  padding: 10px 20px;
+  margin:20px 4px;
+  border-radius: 50px;
+}
+
+.sign-out-button:hover {
+  background: #3cb0fd;
+
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.transactions {
+  margin-left: 430px;
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 600px;
+  height: 400px;
+  overflow: auto;
+  border: 3px solid #023047;
+  font-family: Outfit;
+}
+.icon{
+  width:40px;
+  height:40px;
+}
+.t-info{
+  display: flex;
+  align-items:start;
+}
+.delete{
+  background-color: red;
+  color:white;
+  border:none;
+  padding: 10px 20px;
+  margin:0px 0px;
+  border-radius: 50px;
+}
+.info{
+  display:flex;
+  justify-content:space-between;
+}
