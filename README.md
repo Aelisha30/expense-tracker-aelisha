@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+Project Description
+Expense Tracker is a simple web application designed to help users track and manage their personal finances by recording their expenses. This application provides users with the ability to add, view, and categorize their expenses efficiently. It supports features such as user authentication, categorization of expenses, and detailed reports on spending patterns. The back-end is built using a RESTful API, which handles user data, expense records, and categories.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Key features of the application include:
 
-## Available Scripts
+User Registration & Authentication: Allows users to register, log in, and authenticate using their credentials.
+Expense Management: Users can record their expenses with descriptions, categories, amounts, and dates.
+Expense Categories: Expenses can be organized under predefined categories (e.g., Food, Transport, Entertainment, etc.).
+View Expenses: Users can view all their expenses, filtered by user and category.
+Responsive Design: The user interface is designed to be responsive, offering a seamless experience on both desktop and mobile devices.
 
-In the project directory, you can run:
+Setup Instructions
+Follow the steps below to set up and run the Expense Tracker project locally on your machine.
 
-### `npm start`
+1. Clone the Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/Aelisha30/expense-tracker-aelisha.git
+cd expense-tracker-aelisha
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install Dependencies
+   
+Make sure you have Node.js and npm installed on your machine. If not, download and install from Node.js official website.
 
-### `npm test`
+Install the necessary dependencies for the project:
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Configure Database
+Make sure you have a MySQL (or compatible) database set up. Create a database called ExpenseTracker (or another name of your choice) and modify the database connection details in the configuration file.
 
-### `npm run build`
+For example, in config/dbConfig.js:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+module.exports = {
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'ExpenseTracker'
+};
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Set Up Environment Variables
+Create a .env file at the root of the project (if not already created), and add the following configuration:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=password
+DB_NAME=ExpenseTracker
+JWT_SECRET=your_jwt_secret_key
 
-### `npm run eject`
+5. Run the Application
+Once all dependencies are installed and the environment is set up, you can run the application locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
+By default, the application will run on http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Testing the API
+You can use tools like Postman to test the API endpoints. Here is a quick guide to test the basic endpoints:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+User Registration: Use the POST /api/register endpoint to create a new user. Send the username, password, and email in the request body.
+User Login: After registration, use POST /api/login with the same credentials to receive a JWT token for authentication.
+Create Expense: Use the POST /api/expenses endpoint with user authentication to add a new expense.
+Get Expenses: Retrieve all expenses for the authenticated user with the GET /api/expenses/{user_id} endpoint.
+Get Categories: Use the GET /api/categories endpoint to get a list of expense categories.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
