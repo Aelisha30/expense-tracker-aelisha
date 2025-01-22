@@ -1,4 +1,4 @@
-Project Description
+Project Description:-
 Expense Tracker is a simple web application designed to help users track and manage their personal finances by recording their expenses. This application provides users with the ability to add, view, and categorize their expenses efficiently. It supports features such as user authentication, categorization of expenses, and detailed reports on spending patterns. The back-end is built using a RESTful API, which handles user data, expense records, and categories.
 
 Key features of the application include:
@@ -9,7 +9,7 @@ Expense Categories: Expenses can be organized under predefined categories (e.g.,
 View Expenses: Users can view all their expenses, filtered by user and category.
 Responsive Design: The user interface is designed to be responsive, offering a seamless experience on both desktop and mobile devices.
 
-Setup Instructions
+Setup Instructions:-
 Follow the steps below to set up and run the Expense Tracker project locally on your machine.
 
 1. Clone the Repository
@@ -36,7 +36,7 @@ module.exports = {
   database: 'ExpenseTracker'
 };
 
-4. Set Up Environment Variables
+4. Set Up Environment Variables:-
 Create a .env file at the root of the project (if not already created), and add the following configuration:
 
 DB_HOST=localhost
@@ -45,13 +45,13 @@ DB_PASSWORD=password
 DB_NAME=ExpenseTracker
 JWT_SECRET=your_jwt_secret_key
 
-5. Run the Application
+5. Run the Application:-
 Once all dependencies are installed and the environment is set up, you can run the application locally:
 
 npm start
 By default, the application will run on http://localhost:3000.
 
-Testing the API
+Testing the API:-
 You can use tools like Postman to test the API endpoints. Here is a quick guide to test the basic endpoints:
 
 User Registration: Use the POST /api/register endpoint to create a new user. Send the username, password, and email in the request body.
